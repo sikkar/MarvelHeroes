@@ -46,6 +46,9 @@
 		0B90D04225F5674000EA8AB1 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90D04125F5674000EA8AB1 /* CharacterDetailViewController.swift */; };
 		0B90D04725F5675600EA8AB1 /* CharacterDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90D04625F5675600EA8AB1 /* CharacterDetailPresenter.swift */; };
 		0B90D05825F569E300EA8AB1 /* CharacterDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90D05725F569E300EA8AB1 /* CharacterDetailRouter.swift */; };
+		0B90D05D25F56BB900EA8AB1 /* TransitionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90D05C25F56BB900EA8AB1 /* TransitionFactory.swift */; };
+		0B90D06225F56BE400EA8AB1 /* ModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90D06125F56BE400EA8AB1 /* ModalTransition.swift */; };
+		0B90D06725F56C2500EA8AB1 /* PushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90D06625F56C2500EA8AB1 /* PushTransition.swift */; };
 		8D698D80294AF53EF86A0649 /* Pods_marvelheroes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABDDF57A69DB8B49474B8C9 /* Pods_marvelheroes.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +115,9 @@
 		0B90D04125F5674000EA8AB1 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		0B90D04625F5675600EA8AB1 /* CharacterDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenter.swift; sourceTree = "<group>"; };
 		0B90D05725F569E300EA8AB1 /* CharacterDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailRouter.swift; sourceTree = "<group>"; };
+		0B90D05C25F56BB900EA8AB1 /* TransitionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionFactory.swift; sourceTree = "<group>"; };
+		0B90D06125F56BE400EA8AB1 /* ModalTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransition.swift; sourceTree = "<group>"; };
+		0B90D06625F56C2500EA8AB1 /* PushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransition.swift; sourceTree = "<group>"; };
 		48D022FA44A2E05C0E764B39 /* Pods-marvelheroes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvelheroes.release.xcconfig"; path = "Target Support Files/Pods-marvelheroes/Pods-marvelheroes.release.xcconfig"; sourceTree = "<group>"; };
 		8ABDDF57A69DB8B49474B8C9 /* Pods_marvelheroes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvelheroes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AABA76749A7398A7096143 /* Pods-marvelheroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvelheroes.debug.xcconfig"; path = "Target Support Files/Pods-marvelheroes/Pods-marvelheroes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,8 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				0B1642FB25F4DED3001FCD85 /* AppDelegate.swift */,
-				0B16436625F4F11E001FCD85 /* Routing */,
 				0B16434025F4EA92001FCD85 /* Modules */,
+				0B16436625F4F11E001FCD85 /* Routing */,
 				0B90D01D25F54CAC00EA8AB1 /* Model */,
 				0B16439C25F502CB001FCD85 /* Communications */,
 				0B16433F25F4EA70001FCD85 /* Storyboards */,
@@ -280,6 +286,9 @@
 			isa = PBXGroup;
 			children = (
 				0B16436825F4F182001FCD85 /* Transition.swift */,
+				0B90D05C25F56BB900EA8AB1 /* TransitionFactory.swift */,
+				0B90D06125F56BE400EA8AB1 /* ModalTransition.swift */,
+				0B90D06625F56C2500EA8AB1 /* PushTransition.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -579,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B90D06225F56BE400EA8AB1 /* ModalTransition.swift in Sources */,
 				0B1643C125F52F77001FCD85 /* BasicServerProtocol.swift in Sources */,
 				0B90D03D25F566D900EA8AB1 /* CharacterDetailBuilder.swift in Sources */,
 				0B16438325F4F6FA001FCD85 /* HomeBuilder.swift in Sources */,
@@ -587,6 +597,8 @@
 				0B90D01925F54C6400EA8AB1 /* CharactersResponseData.swift in Sources */,
 				0B1643B925F52F40001FCD85 /* BasicServer.swift in Sources */,
 				0B90D04225F5674000EA8AB1 /* CharacterDetailViewController.swift in Sources */,
+				0B90D05D25F56BB900EA8AB1 /* TransitionFactory.swift in Sources */,
+				0B90D06725F56C2500EA8AB1 /* PushTransition.swift in Sources */,
 				0B1642FC25F4DED3001FCD85 /* AppDelegate.swift in Sources */,
 				0B16435725F4EC9F001FCD85 /* BasicBuilderProtocol.swift in Sources */,
 				0B16434425F4EAEC001FCD85 /* BasicPresenter.swift in Sources */,

@@ -12,11 +12,11 @@ protocol Transition: AnyObject {
     var completionHandler: VoidHandler? { get set }
 
     func open(_ viewController: UIViewController)
-    func close(_ viewController: UIViewController, toRoot root: Bool, toViewControllerType viewControllerType: UIViewController.Type?, animated: Bool)
+    func close(_ viewController: UIViewController, toRoot root: Bool, animated: Bool)
 }
 
 extension Transition {
-    func close(_ viewController: UIViewController, toRoot root: Bool = false, toViewControllerType viewControllerType: UIViewController.Type? = nil, animated: Bool = true) {
-        close(viewController, toRoot: root, toViewControllerType: viewControllerType, animated: animated)
+    func close(_ viewController: UIViewController, toRoot root: Bool = false, animated: Bool = true) {
+        close(viewController, toRoot: root, animated: animated)
     }
 }
