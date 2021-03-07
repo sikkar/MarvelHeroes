@@ -26,18 +26,11 @@ extension BasicServerProtocol {
                     ------------------------------------------
                     """
                 )
-                if JSONSerialization.isValidJSONObject(json) {
-                    let data = try JSONSerialization.data(withJSONObject: json, options: [])
-                    let jsonDecoder = JSONDecoder()
-                    let result = try jsonDecoder.decode(T.self, from: data)
-                    completion(Result.success(result))
-                } else {
-                    let baseSuccess: [String: Any] = ["message": "success", "code": 204]
-                    let data = try JSONSerialization.data(withJSONObject: baseSuccess, options: [])
-                    let jsonDecoder = JSONDecoder()
-                    let result = try jsonDecoder.decode(T.self, from: data)
-                    completion(Result.success(result))
-                }
+                
+                let data = try JSONSerialization.data(withJSONObject: json, options: [])
+                let jsonDecoder = JSONDecoder()
+                let result = try jsonDecoder.decode(T.self, from: data)
+                completion(Result.success(result))
             } catch let error {
                 print(error)
                 if let parsedError = ServerManagerErrorHandler().validate(error: error, responseData: response.data) {

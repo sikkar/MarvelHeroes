@@ -14,11 +14,12 @@ enum StoryboardName: String {
 enum ViewControllerId: String {
     // Main View
     case home              = "HomeViewController"
+    case detail            = "CharacterDetailViewController"
 
     var storyboard: StoryboardName {
         switch self {
         // Main View
-        case .home:
+        case .home, .detail:
             return .main
         }
     }

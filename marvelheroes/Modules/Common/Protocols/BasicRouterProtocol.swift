@@ -15,20 +15,7 @@ protocol BasicRouterProtocol: AnyObject {
     func open(_ viewController: UIViewController, transition: Transition)
     func close(animated: Bool)
     func closeToRoot(animated: Bool)
-    func closeToPrevious(viewControllerType: UIViewController.Type, animated: Bool)
 
     //Common routes
     //func showAlert(with configuration: CustomAlert)
-}
-
-extension BasicRouterProtocol {
-    func close(animated: Bool = true) {
-        close(animated: animated)
-    }
-    func closeToRoot(animated: Bool = true) {
-        closeToRoot(animated: animated)
-    }
-    func closeToPrevious(viewControllerType: UIViewController.Type, animated: Bool = true) {
-        closeToPrevious(viewControllerType: viewControllerType, animated: animated)
-    }
 }

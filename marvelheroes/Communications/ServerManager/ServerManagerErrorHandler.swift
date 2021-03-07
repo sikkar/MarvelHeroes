@@ -13,7 +13,6 @@ struct ServerManagerErrorHandler {
     private let unauthorizedError = 401
     private let forbiddenError = 403
     private let notFoundError = 404
-    private let requestEntityTooLarge = 413
     private let clientError = 409
     private let serverError = 500
 
@@ -111,9 +110,6 @@ struct ServerManagerErrorHandler {
         case forbiddenError:
             print(forbiddenError, ": Forbidden Error")
             return makeForbiddenError(nil)
-        case requestEntityTooLarge:
-            print(requestEntityTooLarge, ": Request entity too large")
-            return makeClientError(responseData)
         case clientError:
             print(clientError, ": Client error")
             return makeClientError(responseData)
@@ -135,7 +131,7 @@ struct ServerManagerErrorHandler {
             responseError = decodeResponse(from: data, type: ResponseError.self) as? ResponseError
         }
         result = responseError?.base.status ?? "Unexpected error"
-        if  let code = responseError?.base.code, Int(code) == 409 {
+        if  let code = responseError?.base.code, Int(code) == 401 {
             return ServerManagerError.unauthorizedError(result)
         } else {
             return ServerManagerError.clientError(result)
@@ -150,16 +146,8 @@ struct ServerManagerErrorHandler {
             return nil
         case 400: //Server: generic error
             return ServerManagerError.clientError(baseResponse.status)
-        case 413: //Server: duplicated user error
+        case 409: //Server: Error response
             return ServerManagerError.clientError(baseResponse.status)
-        case 414: //Server: missing minimum parameters error
-            return ServerManagerError.clientError(baseResponse.status)
-        case 415: //Server: no registered user found error
-            return ServerManagerError.clientError(baseResponse.status)
-        case 416: //Server: cannot create new token error
-            return ServerManagerError.clientError(baseResponse.status)
-        case 419: //Server: invalid token error
-            return ServerManagerError.unauthorizedError(baseResponse.status)
         default:
             return ServerManagerError.clientError(baseResponse.status)
         }

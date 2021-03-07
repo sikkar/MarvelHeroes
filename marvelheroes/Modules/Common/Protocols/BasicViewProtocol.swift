@@ -10,18 +10,15 @@ import UIKit
 
 protocol BasicViewProtocol: AnyObject {
     func showLoading()
-    func showLoading(lockScreen: Bool)
     func hideLoading()
 }
 
 extension UIViewController: BasicViewProtocol {
     func showLoading() {
-        showLoading(lockScreen: true)
-    }
-
-    func showLoading(lockScreen: Bool) {
+        LoadingOverlay.shared.showOverlay(view: self.view)
     }
 
     func hideLoading() {
+        LoadingOverlay.shared.hideOverlay()
     }
 }
