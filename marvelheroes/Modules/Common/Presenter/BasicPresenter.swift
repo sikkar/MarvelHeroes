@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class BasicPresenter<V: BasicViewProtocol, R: BasicRouterProtocol>: BasicPresenterCallbackProtocol {
@@ -18,7 +19,6 @@ class BasicPresenter<V: BasicViewProtocol, R: BasicRouterProtocol>: BasicPresent
     }
 
     func defaultError(_ error: String) {
-
     }
 
     func clientError(_ error: String) {

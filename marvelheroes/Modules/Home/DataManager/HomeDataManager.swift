@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeDataManagerProtocol {
-    func getAllHeroes()
+    func getCharacters(completion: @escaping Handler<[Character]?>)
 }
 
 class HomeDataManager: BasicDataManager {
@@ -16,12 +16,12 @@ class HomeDataManager: BasicDataManager {
 }
 
 extension HomeDataManager: HomeDataManagerProtocol {
-    func getAllHeroes() {
-        server.getHeroes { result in
+    func getCharacters(completion: @escaping Handler<[Character]?>) {
+        server.getCharacters { result in
             do {
                 try self.handle {
-                    let status = try result.get().status
-                    print(status)
+                    let chars = try result.get().data.results
+                    completion(chars)
                 }
             } catch {
                 let result = "Unexpected Error"

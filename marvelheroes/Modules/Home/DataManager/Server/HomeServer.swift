@@ -8,12 +8,12 @@
 import Foundation
 
 protocol HomeServerProtocol {
-    func getHeroes(completion: @escaping ResultHandler<BaseResponse>)
+    func getCharacters(completion: @escaping ResultHandler<CharactersResponseData>)
 }
 
 final class HomeServer: BasicServer, HomeServerProtocol {
-    func getHeroes(completion: @escaping ResultHandler<BaseResponse>) {
-        manager.getAllHeroes { response in
+    func getCharacters(completion: @escaping ResultHandler<CharactersResponseData>) {
+        manager.getAllCharacters { response in
             self.handle(response: response, completion: completion)
         }
     }

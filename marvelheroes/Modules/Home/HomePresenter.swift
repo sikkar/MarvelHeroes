@@ -22,7 +22,14 @@ class HomePresenter<V: HomeViewProtocol, R: HomeRouterProtocol>: BasicPresenter<
 
 extension HomePresenter: HomePresenterProtocol {
     func viewDidLoad() {
-        dataManager.getAllHeroes()
+        dataManager.getCharacters { chars in
+            guard let heroes = chars else {
+                return
+            }
+            for char in heroes {
+                print("\(char)\n")
+            }
+        }
     }
 }
 

@@ -9,11 +9,11 @@ import Alamofire
 import Foundation
 
 protocol HeroesServerManager: ServerManagerProtocol {
-    func getAllHeroes(completion: @escaping (AFDataResponse<Any>) -> Void)
+    func getAllCharacters(completion: @escaping (AFDataResponse<Any>) -> Void)
 }
 
 extension ServerManager: HeroesServerManager {
-    func getAllHeroes(completion: @escaping (AFDataResponse<Any>) -> Void) {
+    func getAllCharacters(completion: @escaping (AFDataResponse<Any>) -> Void) {
         let completeRequest = baseURL! + "v1/public/characters"
         let parameters: [String: Any] =  ["limit": 10]
 
