@@ -14,7 +14,7 @@ protocol ServerManagerProtocol {
     func publicRequest(
                        _ url: URLConvertible,
                        method: HTTPMethod,
-                       parameters: Parameters?,
+                       parameters: Parameters,
                        encoding: ParameterEncoding,
                        headers: HTTPHeaders?
         ) -> DataRequest
@@ -26,6 +26,8 @@ class ServerManager: ServerManagerProtocol {
     var manager: Session
     var timeoutIntervalForRequest: TimeInterval = 60.0
     var timeoutIntervalForResource: TimeInterval = 60.0
+    private let apiKey: String = "c2e8f8aa9149ef103b1b6fd1aedba749"
+    private let privateKey: String = "a81cdc1a29654b2715206090b48ce50c6f25bcbe"
 
     private var defaultHeaders: HTTPHeaders
 
@@ -65,7 +67,7 @@ class ServerManager: ServerManagerProtocol {
     }
 
     static func defaultManager() -> ServerManager {
-        let serverManager = ServerManager(baseURL: "",
+        let serverManager = ServerManager(baseURL: "https://gateway.marvel.com:443/",
                                           version: "",
                                           timeoutIntervalForRequest: 60.0,
                                           timeoutIntervalForResource: 60.0,
@@ -79,15 +81,26 @@ class ServerManager: ServerManagerProtocol {
 
     func publicRequest(_ url: URLConvertible,
                        method: HTTPMethod = .get,
-                       parameters: Parameters? = nil,
+                       parameters: Parameters = [:],
                        encoding: ParameterEncoding = URLEncoding.default,
                        headers: HTTPHeaders? = nil
         ) -> DataRequest {
         print("------------------------------------------\n🌍 [REQUEST][URL]\n \(url):")
-        if let params = parameters {
-            print("[REQUEST][PARAMETERS]\n \(params as AnyObject)")
-        }
+
+        let parameters = addCommonParams(params: parameters)
+        print("[REQUEST][PARAMETERS]\n \(parameters as AnyObject)")
+
         print("------------------------------------------")
         return manager.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers)
+    }
+
+    private func addCommonParams(params: Parameters) -> Parameters {
+        var allParams = params
+        let timestamp = "\(Date().timeIntervalSince1970)"
+        let hash = MD5(string: "\(timestamp)\(privateKey)\(apiKey)")
+        allParams["ts"] = timestamp
+        allParams["apikey"] = apiKey
+        allParams["hash"] = hash
+        return allParams
     }
 }

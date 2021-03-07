@@ -8,6 +8,6 @@
 import Foundation
 
 struct BaseResponse: Codable {
-    var message: String
-    var code: String
+    var status: String
+    var code: Int
 }

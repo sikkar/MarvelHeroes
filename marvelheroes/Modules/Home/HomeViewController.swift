@@ -15,6 +15,7 @@ class HomeViewController: BasicViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
     }
 
 }

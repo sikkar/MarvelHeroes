@@ -10,7 +10,7 @@ import Foundation
 
 struct ServerManagerErrorHandler {
     private let badRequestError = 400
-    private let unauthorizedError = 401
+    private let unauthorizedError = 409
     private let forbiddenError = 403
     private let notFoundError = 404
     private let requestEntityTooLarge = 413
@@ -134,7 +134,7 @@ struct ServerManagerErrorHandler {
         if let data = responseData {
             responseError = decodeResponse(from: data, type: ResponseError.self) as? ResponseError
         }
-        result = responseError?.base.message ?? "Unexpected error"
+        result = responseError?.base.status ?? "Unexpected error"
         if  let code = responseError?.base.code, Int(code) == 419 {
             return ServerManagerError.unauthorizedError(result)
         } else {
@@ -149,19 +149,19 @@ struct ServerManagerErrorHandler {
         case 200:
             return nil
         case 400: //Athletic Server: generic error
-            return ServerManagerError.clientError(baseResponse.message)
+            return ServerManagerError.clientError(baseResponse.status)
         case 413: //Athletic Server: duplicated user error
-            return ServerManagerError.clientError(baseResponse.message)
+            return ServerManagerError.clientError(baseResponse.status)
         case 414: //Athletic Server: missing minimum parameters error
-            return ServerManagerError.clientError(baseResponse.message)
+            return ServerManagerError.clientError(baseResponse.status)
         case 415: //Athletic Server: no registered user found error
-            return ServerManagerError.clientError(baseResponse.message)
+            return ServerManagerError.clientError(baseResponse.status)
         case 416: //Athletic Server: cannot create new token error
-            return ServerManagerError.clientError(baseResponse.message)
+            return ServerManagerError.clientError(baseResponse.status)
         case 419: //Athletic Server: invalid token error
-            return ServerManagerError.unauthorizedError(baseResponse.message)
+            return ServerManagerError.unauthorizedError(baseResponse.status)
         default:
-            return ServerManagerError.clientError(baseResponse.message)
+            return ServerManagerError.clientError(baseResponse.status)
         }
     }
 

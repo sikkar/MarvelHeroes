@@ -15,6 +15,7 @@ class BasicDataManager {
         self.init()
         self.callbackDelegate = delegate
     }
+
     func handle<T>(result: Result<T, Error>, completion: @escaping Handler<T>) {
         do {
             try self.handle {
