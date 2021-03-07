@@ -9,7 +9,7 @@ import UIKit
 
 protocol Transition: AnyObject {
     var sourceViewController: UIViewController? { get set }
-    var completionHandler: () -> Void? { get set }
+    var completionHandler: VoidHandler? { get set }
 
     func open(_ viewController: UIViewController)
     func close(_ viewController: UIViewController, toRoot root: Bool, toViewControllerType viewControllerType: UIViewController.Type?, animated: Bool)

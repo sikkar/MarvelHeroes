@@ -36,4 +36,16 @@ class BasicPresenter<V: BasicViewProtocol, R: BasicRouterProtocol>: BasicPresent
     func noInternetError(_ error: String) {
         
     }
+
+    func badRequestError(_ error: String) {
+
+    }
+
+    func notFoundError(_ error: String) {
+
+    }
+
+    func forbiddenError(_ error: String) {
+
+    }
 }

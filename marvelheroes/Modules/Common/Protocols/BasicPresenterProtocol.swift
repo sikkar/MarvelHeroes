@@ -11,6 +11,9 @@ protocol BasicPresenterCallbackProtocol: AnyObject {
     func defaultError(_ error: String)
     func clientError(_ error: String)
     func unauthorized(_ error: String)
+    func badRequestError(_ error: String)
+    func notFoundError(_ error: String)
+    func forbiddenError(_ error: String)
     func serverError(_ error: String)
     func noInternetError(_ error: String)
 }

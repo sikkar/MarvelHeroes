@@ -26,6 +26,14 @@
 		0B16438B25F4F748001FCD85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16438A25F4F748001FCD85 /* HomeViewController.swift */; };
 		0B16439325F4F86B001FCD85 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16439225F4F86B001FCD85 /* HomePresenter.swift */; };
 		0B16439825F4F8F1001FCD85 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16439725F4F8F1001FCD85 /* HomeRouter.swift */; };
+		0B16439F25F502FA001FCD85 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16439E25F502FA001FCD85 /* ServerManager.swift */; };
+		0B1643A725F52E41001FCD85 /* BasicDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1643A625F52E41001FCD85 /* BasicDataManager.swift */; };
+		0B1643B025F52EA1001FCD85 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1643AF25F52EA1001FCD85 /* Constants.swift */; };
+		0B1643B925F52F40001FCD85 /* BasicServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1643B825F52F40001FCD85 /* BasicServer.swift */; };
+		0B1643C125F52F77001FCD85 /* BasicServerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1643C025F52F77001FCD85 /* BasicServerProtocol.swift */; };
+		0B1643C625F52FD4001FCD85 /* ServerManagerErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1643C525F52FD4001FCD85 /* ServerManagerErrorHandler.swift */; };
+		0B1643CC25F5309E001FCD85 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1643CB25F5309E001FCD85 /* BaseResponse.swift */; };
+		0B1643D425F530A8001FCD85 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1643D325F530A8001FCD85 /* ResponseError.swift */; };
 		8D698D80294AF53EF86A0649 /* Pods_marvelheroes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABDDF57A69DB8B49474B8C9 /* Pods_marvelheroes.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +80,14 @@
 		0B16438A25F4F748001FCD85 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0B16439225F4F86B001FCD85 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		0B16439725F4F8F1001FCD85 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		0B16439E25F502FA001FCD85 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		0B1643A625F52E41001FCD85 /* BasicDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDataManager.swift; sourceTree = "<group>"; };
+		0B1643AF25F52EA1001FCD85 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0B1643B825F52F40001FCD85 /* BasicServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicServer.swift; sourceTree = "<group>"; };
+		0B1643C025F52F77001FCD85 /* BasicServerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicServerProtocol.swift; sourceTree = "<group>"; };
+		0B1643C525F52FD4001FCD85 /* ServerManagerErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManagerErrorHandler.swift; sourceTree = "<group>"; };
+		0B1643CB25F5309E001FCD85 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		0B1643D325F530A8001FCD85 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		48D022FA44A2E05C0E764B39 /* Pods-marvelheroes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvelheroes.release.xcconfig"; path = "Target Support Files/Pods-marvelheroes/Pods-marvelheroes.release.xcconfig"; sourceTree = "<group>"; };
 		8ABDDF57A69DB8B49474B8C9 /* Pods_marvelheroes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvelheroes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AABA76749A7398A7096143 /* Pods-marvelheroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvelheroes.debug.xcconfig"; path = "Target Support Files/Pods-marvelheroes/Pods-marvelheroes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +156,9 @@
 				0B1642FB25F4DED3001FCD85 /* AppDelegate.swift */,
 				0B16436625F4F11E001FCD85 /* Routing */,
 				0B16434025F4EA92001FCD85 /* Modules */,
+				0B16439C25F502CB001FCD85 /* Communications */,
 				0B16433F25F4EA70001FCD85 /* Storyboards */,
+				0B1643AE25F52E8D001FCD85 /* Utils */,
 				0B16430425F4DED4001FCD85 /* Assets.xcassets */,
 				0B16430925F4DED4001FCD85 /* Info.plist */,
 			);
@@ -187,6 +205,7 @@
 		0B16434125F4EAC0001FCD85 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0B1643A525F52E25001FCD85 /* DataManager */,
 				0B16436025F4F0A3001FCD85 /* Controllers */,
 				0B16434B25F4EB4C001FCD85 /* Protocols */,
 				0B16434225F4EAD5001FCD85 /* Presenter */,
@@ -209,6 +228,7 @@
 				0B16435125F4EBCC001FCD85 /* BasicViewProtocol.swift */,
 				0B16435625F4EC9F001FCD85 /* BasicBuilderProtocol.swift */,
 				0B16435B25F4F063001FCD85 /* BasicRouterProtocol.swift */,
+				0B1643C025F52F77001FCD85 /* BasicServerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -255,6 +275,58 @@
 				0B16439725F4F8F1001FCD85 /* HomeRouter.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		0B16439C25F502CB001FCD85 /* Communications */ = {
+			isa = PBXGroup;
+			children = (
+				0B16439D25F502E4001FCD85 /* ServerManager */,
+			);
+			path = Communications;
+			sourceTree = "<group>";
+		};
+		0B16439D25F502E4001FCD85 /* ServerManager */ = {
+			isa = PBXGroup;
+			children = (
+				0B1643CA25F5308B001FCD85 /* Responses */,
+				0B16439E25F502FA001FCD85 /* ServerManager.swift */,
+				0B1643C525F52FD4001FCD85 /* ServerManagerErrorHandler.swift */,
+			);
+			path = ServerManager;
+			sourceTree = "<group>";
+		};
+		0B1643A525F52E25001FCD85 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				0B1643B725F52F31001FCD85 /* Server */,
+				0B1643A625F52E41001FCD85 /* BasicDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		0B1643AE25F52E8D001FCD85 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0B1643AF25F52EA1001FCD85 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0B1643B725F52F31001FCD85 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				0B1643B825F52F40001FCD85 /* BasicServer.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		0B1643CA25F5308B001FCD85 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				0B1643CB25F5309E001FCD85 /* BaseResponse.swift */,
+				0B1643D325F530A8001FCD85 /* ResponseError.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		F7073467A3455A88721827BE /* Frameworks */ = {
@@ -439,18 +511,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1643C125F52F77001FCD85 /* BasicServerProtocol.swift in Sources */,
 				0B16438325F4F6FA001FCD85 /* HomeBuilder.swift in Sources */,
+				0B1643B025F52EA1001FCD85 /* Constants.swift in Sources */,
 				0B16436925F4F182001FCD85 /* Transition.swift in Sources */,
+				0B1643B925F52F40001FCD85 /* BasicServer.swift in Sources */,
 				0B1642FC25F4DED3001FCD85 /* AppDelegate.swift in Sources */,
 				0B16435725F4EC9F001FCD85 /* BasicBuilderProtocol.swift in Sources */,
 				0B16434425F4EAEC001FCD85 /* BasicPresenter.swift in Sources */,
 				0B16435C25F4F063001FCD85 /* BasicRouterProtocol.swift in Sources */,
 				0B16439325F4F86B001FCD85 /* HomePresenter.swift in Sources */,
 				0B16437225F4F3B0001FCD85 /* BasicRouter.swift in Sources */,
+				0B1643A725F52E41001FCD85 /* BasicDataManager.swift in Sources */,
+				0B1643C625F52FD4001FCD85 /* ServerManagerErrorHandler.swift in Sources */,
 				0B16436225F4F0B2001FCD85 /* BasicViewController.swift in Sources */,
 				0B16439825F4F8F1001FCD85 /* HomeRouter.swift in Sources */,
+				0B16439F25F502FA001FCD85 /* ServerManager.swift in Sources */,
 				0B16437D25F4F625001FCD85 /* StoryboardHandler.swift in Sources */,
 				0B16434D25F4EB7B001FCD85 /* BasicPresenterProtocol.swift in Sources */,
+				0B1643CC25F5309E001FCD85 /* BaseResponse.swift in Sources */,
+				0B1643D425F530A8001FCD85 /* ResponseError.swift in Sources */,
 				0B16438B25F4F748001FCD85 /* HomeViewController.swift in Sources */,
 				0B16435225F4EBCC001FCD85 /* BasicViewProtocol.swift in Sources */,
 			);
