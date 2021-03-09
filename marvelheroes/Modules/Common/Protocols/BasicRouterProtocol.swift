@@ -17,5 +17,5 @@ protocol BasicRouterProtocol: AnyObject {
     func closeToRoot(animated: Bool)
 
     //Common routes
-    //func showAlert(with configuration: CustomAlert)
+    func showAlert(with title: String, and message: String, handler: ((UIAlertAction) -> Void)?)
 }

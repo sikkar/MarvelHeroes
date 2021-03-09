@@ -25,6 +25,21 @@ class HomePresenter<V: HomeViewProtocol, R: HomeRouterProtocol>: BasicPresenter<
         dataManager = HomeDataManager(delegate:self)
     }
 
+    override func clientError(_ error: String) {
+        showAlertAndRetry(error)
+    }
+
+    override func noInternetError(_ error: String) {
+        showAlertAndRetry(error)
+    }
+
+    private func showAlertAndRetry(_ error: String) {
+        self.view?.hideLoading()
+        self.router.showAlert(with: "No Internet", and: error) { _ in
+            self.getCharacters()
+        }
+    }
+
     private func getCharacters() {
         self.view?.showLoading()
         dataManager.getCharacters(page: currentPage * itemsPerPage) { [weak self] chars in

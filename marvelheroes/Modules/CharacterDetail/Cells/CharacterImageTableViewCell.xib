@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterImageTableViewCell" rowHeight="250" id="KGk-i7-Jjw" customClass="CharacterImageTableViewCell" customModule="marvelheroes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qXL-WK-GIP">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.403044906317019" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="aN5-dw-gza"/>
+                        </constraints>
+                    </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xwp-7m-mje">
+                        <rect key="frame" x="161.5" y="106.5" width="37" height="37"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xwp-7m-mje" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2wN-FC-n1P"/>
+                    <constraint firstItem="qXL-WK-GIP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Saz-U4-koX"/>
+                    <constraint firstAttribute="bottom" secondItem="qXL-WK-GIP" secondAttribute="bottom" id="TAP-kI-2lt"/>
+                    <constraint firstItem="qXL-WK-GIP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fqs-Xw-rbf"/>
+                    <constraint firstAttribute="trailing" secondItem="qXL-WK-GIP" secondAttribute="trailing" id="iXO-Vv-i5q"/>
+                    <constraint firstItem="xwp-7m-mje" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="m4M-wf-sHe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="activityIndicator" destination="xwp-7m-mje" id="D9e-az-ZTm"/>
+                <outlet property="charImageView" destination="qXL-WK-GIP" id="1WK-Ue-D4N"/>
+            </connections>
+            <point key="canvasLocation" x="134.78260869565219" y="128.57142857142856"/>
+        </tableViewCell>
+    </objects>
+</document>

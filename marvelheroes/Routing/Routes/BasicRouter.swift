@@ -8,6 +8,7 @@
 import UIKit
 
 class BasicRouter: BasicRouterProtocol {
+
     weak var viewController: UIViewController?
     var openTransition: Transition?
 
@@ -46,5 +47,11 @@ class BasicRouter: BasicRouterProtocol {
 
     deinit {
         print("deinit ", self)
+    }
+}
+
+extension BasicRouter: CustomAlertRoute {
+    func showAlert(with title: String, and message: String, handler: ((UIAlertAction) -> Void)?) {
+        openAlert(title: title, message: message, handler: handler)
     }
 }
