@@ -8,7 +8,8 @@
 import Foundation
 
 protocol HomeDataManagerProtocol {
-    func getCharacters(completion: @escaping Handler<[Character]?>)
+    func getCharacters(page:Int, completion: @escaping Handler<[Character]?>)
+    func getCharacterDetailWith(id characterId: String, completion: @escaping Handler<Character>)
 }
 
 class HomeDataManager: BasicDataManager {
@@ -16,12 +17,31 @@ class HomeDataManager: BasicDataManager {
 }
 
 extension HomeDataManager: HomeDataManagerProtocol {
-    func getCharacters(completion: @escaping Handler<[Character]?>) {
-        server.getCharacters { result in
+    func getCharacters(page: Int, completion: @escaping Handler<[Character]?>) {
+        server.getCharacters(page: page) { result in
             do {
                 try self.handle {
                     let chars = try result.get().data.results
                     completion(chars)
+                }
+            } catch {
+                let result = "Unexpected Error"
+                self.callbackDelegate?.defaultError(result)
+            }
+        }
+    }
+
+    func getCharacterDetailWith(id characterId: String, completion: @escaping Handler<Character>) {
+        server.getCharacterDetailWith(id: characterId) { result in
+            do {
+                try self.handle {
+                    let results = try result.get().data.results
+                    guard let charDetails = results?.first else {
+                        let result = "Unexpected Error"
+                        self.callbackDelegate?.defaultError(result)
+                        return
+                    }
+                    completion(charDetails)
                 }
             } catch {
                 let result = "Unexpected Error"

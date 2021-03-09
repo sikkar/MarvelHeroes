@@ -8,12 +8,19 @@
 import Foundation
 
 protocol HomeServerProtocol {
-    func getCharacters(completion: @escaping ResultHandler<CharactersResponseData>)
+    func getCharacters(page: Int, completion: @escaping ResultHandler<CharactersResponseData>)
+    func getCharacterDetailWith(id characterId: String, completion: @escaping ResultHandler<CharactersResponseData>)
 }
 
 final class HomeServer: BasicServer, HomeServerProtocol {
-    func getCharacters(completion: @escaping ResultHandler<CharactersResponseData>) {
-        manager.getAllCharacters { response in
+    func getCharacters(page: Int, completion: @escaping ResultHandler<CharactersResponseData>) {
+        manager.getAllCharacters(page: page) { response in
+            self.handle(response: response, completion: completion)
+        }
+    }
+
+    func getCharacterDetailWith(id characterId: String, completion: @escaping ResultHandler<CharactersResponseData>) {
+        manager.getCharacterWith(id: characterId) { response in
             self.handle(response: response, completion: completion)
         }
     }

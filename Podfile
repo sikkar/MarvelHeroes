@@ -4,6 +4,7 @@ use_frameworks!
 
 target "marvelheroes" do
     pod 'Alamofire'
+    pod 'AlamofireImage', '~> 4.1'
 end
 
 

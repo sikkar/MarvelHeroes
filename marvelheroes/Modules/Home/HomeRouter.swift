@@ -8,7 +8,11 @@
 import Foundation
 
 protocol HomeRouterProtocol: BasicRouterProtocol {
+    func showCharacterDetail(character: Character)
 }
 
-final class HomeRouter: BasicRouter, HomeRouterProtocol {
+final class HomeRouter: BasicRouter, HomeRouterProtocol, CharacterDetailRoute {
+    func showCharacterDetail(character: Character) {
+        openCharacterDetailModule(.push, character: character)
+    }
 }
