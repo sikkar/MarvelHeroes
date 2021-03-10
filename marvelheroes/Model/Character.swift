@@ -28,6 +28,17 @@ struct Character: Codable {
         case urls
     }
 
+    init() {
+        id = 0
+        name = nil
+        description = nil
+        characterImage = nil
+        comics = nil
+        series = nil
+        stories = nil
+        urls = nil
+    }
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decodeIfPresent(Int.self, forKey: .id)

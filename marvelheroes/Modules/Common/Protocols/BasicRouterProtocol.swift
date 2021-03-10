@@ -19,3 +19,12 @@ protocol BasicRouterProtocol: AnyObject {
     //Common routes
     func showAlert(with title: String, and message: String, handler: ((UIAlertAction) -> Void)?)
 }
+
+extension BasicRouterProtocol {
+    func close(animated: Bool = true) {
+        close(animated: animated)
+    }
+    func closeToRoot(animated: Bool = true) {
+        closeToRoot(animated: animated)
+    }
+}

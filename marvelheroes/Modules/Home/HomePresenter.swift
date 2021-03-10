@@ -22,7 +22,7 @@ class HomePresenter<V: HomeViewProtocol, R: HomeRouterProtocol>: BasicPresenter<
 
     required init(router: R, view: V) {
         super.init(router: router, view: view)
-        dataManager = HomeDataManager(delegate:self)
+        dataManager = HomeDataManager(delegate: self)
     }
 
     override func clientError(_ error: String) {

@@ -11,8 +11,6 @@
 		0B16430325F4DED3001FCD85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B16430125F4DED3001FCD85 /* Main.storyboard */; };
 		0B16430525F4DED4001FCD85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B16430425F4DED4001FCD85 /* Assets.xcassets */; };
 		0B16430825F4DED4001FCD85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B16430625F4DED4001FCD85 /* LaunchScreen.storyboard */; };
-		0B16431325F4DED5001FCD85 /* marvelheroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16431225F4DED5001FCD85 /* marvelheroesTests.swift */; };
-		0B16431E25F4DED5001FCD85 /* marvelheroesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16431D25F4DED5001FCD85 /* marvelheroesUITests.swift */; };
 		0B16434425F4EAEC001FCD85 /* BasicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16434325F4EAEC001FCD85 /* BasicPresenter.swift */; };
 		0B16434D25F4EB7B001FCD85 /* BasicPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16434C25F4EB7B001FCD85 /* BasicPresenterProtocol.swift */; };
 		0B16435225F4EBCC001FCD85 /* BasicViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16435125F4EBCC001FCD85 /* BasicViewProtocol.swift */; };
@@ -68,18 +66,15 @@
 		0B90D0C025F7CCCA00EA8AB1 /* CharacterLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90D0BF25F7CCCA00EA8AB1 /* CharacterLinks.swift */; };
 		0B90D0CA25F7D7E100EA8AB1 /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B90D0C825F7D7E100EA8AB1 /* ListItemTableViewCell.swift */; };
 		0B90D0CB25F7D7E100EA8AB1 /* ListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B90D0C925F7D7E100EA8AB1 /* ListItemTableViewCell.xib */; };
+		0BDAE3C425F936A80073795E /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAE3C325F936A80073795E /* HomePresenterTests.swift */; };
+		0BDAE3CF25F937D60073795E /* HomeViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAE3CE25F937D60073795E /* HomeViewSpy.swift */; };
+		0BDAE3EE25F93A1B0073795E /* HomeDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAE3ED25F93A1B0073795E /* HomeDataManagerMock.swift */; };
+		0BDAE3FC25F947130073795E /* HomeRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAE3FB25F947130073795E /* HomeRouterSpy.swift */; };
 		8D698D80294AF53EF86A0649 /* Pods_marvelheroes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABDDF57A69DB8B49474B8C9 /* Pods_marvelheroes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0B16430F25F4DED5001FCD85 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B1642F025F4DED3001FCD85 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0B1642F725F4DED3001FCD85;
-			remoteInfo = marvelheroes;
-		};
-		0B16431A25F4DED5001FCD85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0B1642F025F4DED3001FCD85 /* Project object */;
 			proxyType = 1;
@@ -96,11 +91,7 @@
 		0B16430725F4DED4001FCD85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B16430925F4DED4001FCD85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B16430E25F4DED5001FCD85 /* marvelheroesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marvelheroesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B16431225F4DED5001FCD85 /* marvelheroesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelheroesTests.swift; sourceTree = "<group>"; };
 		0B16431425F4DED5001FCD85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B16431925F4DED5001FCD85 /* marvelheroesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marvelheroesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B16431D25F4DED5001FCD85 /* marvelheroesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelheroesUITests.swift; sourceTree = "<group>"; };
-		0B16431F25F4DED5001FCD85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B16434325F4EAEC001FCD85 /* BasicPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPresenter.swift; sourceTree = "<group>"; };
 		0B16434C25F4EB7B001FCD85 /* BasicPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPresenterProtocol.swift; sourceTree = "<group>"; };
 		0B16435125F4EBCC001FCD85 /* BasicViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewProtocol.swift; sourceTree = "<group>"; };
@@ -156,6 +147,10 @@
 		0B90D0BF25F7CCCA00EA8AB1 /* CharacterLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLinks.swift; sourceTree = "<group>"; };
 		0B90D0C825F7D7E100EA8AB1 /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
 		0B90D0C925F7D7E100EA8AB1 /* ListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemTableViewCell.xib; sourceTree = "<group>"; };
+		0BDAE3C325F936A80073795E /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		0BDAE3CE25F937D60073795E /* HomeViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSpy.swift; sourceTree = "<group>"; };
+		0BDAE3ED25F93A1B0073795E /* HomeDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManagerMock.swift; sourceTree = "<group>"; };
+		0BDAE3FB25F947130073795E /* HomeRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterSpy.swift; sourceTree = "<group>"; };
 		48D022FA44A2E05C0E764B39 /* Pods-marvelheroes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvelheroes.release.xcconfig"; path = "Target Support Files/Pods-marvelheroes/Pods-marvelheroes.release.xcconfig"; sourceTree = "<group>"; };
 		8ABDDF57A69DB8B49474B8C9 /* Pods_marvelheroes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvelheroes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7AABA76749A7398A7096143 /* Pods-marvelheroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvelheroes.debug.xcconfig"; path = "Target Support Files/Pods-marvelheroes/Pods-marvelheroes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,13 +166,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0B16430B25F4DED5001FCD85 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B16431625F4DED5001FCD85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -201,7 +189,6 @@
 			children = (
 				0B1642FA25F4DED3001FCD85 /* marvelheroes */,
 				0B16431125F4DED5001FCD85 /* marvelheroesTests */,
-				0B16431C25F4DED5001FCD85 /* marvelheroesUITests */,
 				0B1642F925F4DED3001FCD85 /* Products */,
 				08DD6B58871B4DAF693CB1C6 /* Pods */,
 				F7073467A3455A88721827BE /* Frameworks */,
@@ -213,7 +200,6 @@
 			children = (
 				0B1642F825F4DED3001FCD85 /* marvelheroes.app */,
 				0B16430E25F4DED5001FCD85 /* marvelheroesTests.xctest */,
-				0B16431925F4DED5001FCD85 /* marvelheroesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,19 +223,11 @@
 		0B16431125F4DED5001FCD85 /* marvelheroesTests */ = {
 			isa = PBXGroup;
 			children = (
-				0B16431225F4DED5001FCD85 /* marvelheroesTests.swift */,
+				0BDAE3C225F9365C0073795E /* Mocks */,
+				0BDAE3C125F936550073795E /* Presenter */,
 				0B16431425F4DED5001FCD85 /* Info.plist */,
 			);
 			path = marvelheroesTests;
-			sourceTree = "<group>";
-		};
-		0B16431C25F4DED5001FCD85 /* marvelheroesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0B16431D25F4DED5001FCD85 /* marvelheroesUITests.swift */,
-				0B16431F25F4DED5001FCD85 /* Info.plist */,
-			);
-			path = marvelheroesUITests;
 			sourceTree = "<group>";
 		};
 		0B16433F25F4EA70001FCD85 /* Storyboards */ = {
@@ -503,6 +481,24 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		0BDAE3C125F936550073795E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0BDAE3C325F936A80073795E /* HomePresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0BDAE3C225F9365C0073795E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0BDAE3CE25F937D60073795E /* HomeViewSpy.swift */,
+				0BDAE3ED25F93A1B0073795E /* HomeDataManagerMock.swift */,
+				0BDAE3FB25F947130073795E /* HomeRouterSpy.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		F7073467A3455A88721827BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,24 +547,6 @@
 			productReference = 0B16430E25F4DED5001FCD85 /* marvelheroesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0B16431825F4DED5001FCD85 /* marvelheroesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0B16432825F4DED5001FCD85 /* Build configuration list for PBXNativeTarget "marvelheroesUITests" */;
-			buildPhases = (
-				0B16431525F4DED5001FCD85 /* Sources */,
-				0B16431625F4DED5001FCD85 /* Frameworks */,
-				0B16431725F4DED5001FCD85 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0B16431B25F4DED5001FCD85 /* PBXTargetDependency */,
-			);
-			name = marvelheroesUITests;
-			productName = marvelheroesUITests;
-			productReference = 0B16431925F4DED5001FCD85 /* marvelheroesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -582,10 +560,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					0B16430D25F4DED5001FCD85 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 0B1642F725F4DED3001FCD85;
-					};
-					0B16431825F4DED5001FCD85 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 0B1642F725F4DED3001FCD85;
 					};
@@ -606,7 +580,6 @@
 			targets = (
 				0B1642F725F4DED3001FCD85 /* marvelheroes */,
 				0B16430D25F4DED5001FCD85 /* marvelheroesTests */,
-				0B16431825F4DED5001FCD85 /* marvelheroesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -627,13 +600,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0B16430C25F4DED5001FCD85 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B16431725F4DED5001FCD85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -748,15 +714,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B16431325F4DED5001FCD85 /* marvelheroesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B16431525F4DED5001FCD85 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B16431E25F4DED5001FCD85 /* marvelheroesUITests.swift in Sources */,
+				0BDAE3EE25F93A1B0073795E /* HomeDataManagerMock.swift in Sources */,
+				0BDAE3C425F936A80073795E /* HomePresenterTests.swift in Sources */,
+				0BDAE3CF25F937D60073795E /* HomeViewSpy.swift in Sources */,
+				0BDAE3FC25F947130073795E /* HomeRouterSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,11 +728,6 @@
 			isa = PBXTargetDependency;
 			target = 0B1642F725F4DED3001FCD85 /* marvelheroes */;
 			targetProxy = 0B16430F25F4DED5001FCD85 /* PBXContainerItemProxy */;
-		};
-		0B16431B25F4DED5001FCD85 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0B1642F725F4DED3001FCD85 /* marvelheroes */;
-			targetProxy = 0B16431A25F4DED5001FCD85 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -995,46 +951,6 @@
 			};
 			name = Release;
 		};
-		0B16432925F4DED5001FCD85 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7TL5UYH78U;
-				INFOPLIST_FILE = marvelheroesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aescriba.marvelheroesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = marvelheroes;
-			};
-			name = Debug;
-		};
-		0B16432A25F4DED5001FCD85 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7TL5UYH78U;
-				INFOPLIST_FILE = marvelheroesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aescriba.marvelheroesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = marvelheroes;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1061,15 +977,6 @@
 			buildConfigurations = (
 				0B16432625F4DED5001FCD85 /* Debug */,
 				0B16432725F4DED5001FCD85 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0B16432825F4DED5001FCD85 /* Build configuration list for PBXNativeTarget "marvelheroesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0B16432925F4DED5001FCD85 /* Debug */,
-				0B16432A25F4DED5001FCD85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
