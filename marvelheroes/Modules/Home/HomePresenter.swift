@@ -35,7 +35,7 @@ class HomePresenter<V: HomeViewProtocol, R: HomeRouterProtocol>: BasicPresenter<
 
     private func showAlertAndRetry(_ error: String) {
         self.view?.hideLoading()
-        self.router.showAlert(with: "No Internet", and: error) { _ in
+        self.router.showAlert(with: "Something went wrong", and: error) { _ in
             self.getCharacters()
         }
     }

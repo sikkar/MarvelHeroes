@@ -13,7 +13,7 @@ protocol HomeDataManagerProtocol {
 }
 
 class HomeDataManager: BasicDataManager {
-    var server: HomeServer! = HomeServer()
+    var server: HomeServerProtocol! = HomeServer()
 }
 
 extension HomeDataManager: HomeDataManagerProtocol {
